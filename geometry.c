@@ -35,6 +35,19 @@ double coord_2d_dist(const coord_2d_t* a, const coord_2d_t* b){
     return sqrt(pow((a->x - b->x), 2) + pow((a->y - b->y), 2));
 
 }
+double coord_2d_area_triangle(const coord_2d_t* a, const coord_2d_t* b, const coord_2d_t* c){
+	double p1 = a->x * (b->y - c->y);
+	double p2 = b->x * (c->y - a->y); 
+	double p3 = c->x * (a->y - b->y);
+
+	double sum = (p1 + p2 + p3)/2;
+	double answer = abs(sum);
+	
+	return answer;
+ 
+
+}
+
 
 bool coord_2d_eq(const coord_2d_t* a, const coord_2d_t* b){
 
