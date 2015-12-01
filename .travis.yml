@@ -3,8 +3,7 @@ language: c
 sudo: required
 
 
-compiler:
-	-gcc
+compiler: gcc
 
 script: make dep && make && make test
 
